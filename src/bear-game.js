@@ -18,16 +18,19 @@ export class HungryBear {
       return true;
     }
   }
-    //
-    // feed() {
-    //   this.foodLevel = 10;
-    // }
 
   feed() {
     if (this.foodLevel < 1) {
-      console.log("you are dead");
+      return false;
     } else {
       this.foodLevel = 10;
+      return true;
     }
   }
+  showEaten() {
+    if (this.foodlevel < 1) {
+      console.log("showEaten");
+    }
+  }
+
 }
