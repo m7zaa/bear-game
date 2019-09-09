@@ -25,7 +25,7 @@ export class HungryBear {
 
   feed() {
     if (this.foodLevel < 1) {
-      return false;
+      console.log("you are dead");
     } else {
       this.foodLevel = 10;
     }
