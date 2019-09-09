@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Bear Game_
 
 #### _{Brief description of application}, {Date of current version}_
 
