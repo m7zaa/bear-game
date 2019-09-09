@@ -15,6 +15,7 @@ $(document).ready(function(){
     newBear.setHunger();
     console.log(newBear.foodLevel);
     $("#currentLevel").text(newBear.foodLevel);
+    $(".startGame").hide();
     $(".foodLevel").show();
 
     $("#hungerCheck").click(function() {
@@ -24,14 +25,23 @@ $(document).ready(function(){
       // newBear.showEaten();
       if (newBear.didYouGetEaten()) {  // created a if statement to display the img if the paramerts are a true false bc if statements only display if they are true.
         $('#eaten').show();
+        $('#eatenBy').text(bearName);
+        $(".startGame").show();
+        $(".gameButtons").hide();
       };
 
 
     $("#feedButton").click(function() {
       event.preventDefault();
-      newBear.showEaten();
-      if(!newBear.feed()){ // created a if statement to display the img if the paramerts are a true false bc if statements only display if they are true.
+      $("#currentLevel").text(newBear.foodLevel);
+      if (newBear.didYouGetEaten()) { // created a if statement to display the img if the paramerts are a true false bc if statements only display if they are true.
         $('#eaten').show();
+        $('#eatenBy').text(bearName);
+        $(".startGame").show();
+        $(".gameButtons").hide();
+      } else {
+        console.log("else");
+        newBear.feed();
       }
     });
     });

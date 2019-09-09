@@ -5,21 +5,39 @@
     <title>Bear Game</title>
   </head>
   <body>
+<div class="container">
 
-    <h1>Feed The Bear!</h1>
-    <label for="">Name The Bear:</label>
-    <input type="text" id="bearNameInput" value=" ">
-    <button id="startButton" type="button">Start Game</button>
+<div class="jumbotron">
+  <h1>Feed The Bear!</h1>
+</div>
+  <div class="row">
+
+  <div class="col-md-6">
+
+    <div class="startGame">
+      <label for="">Name The Bear:</label>
+      <input type="text" id="bearNameInput" value=" ">
+      <button id="startButton" type="button">Start Game</button>
+    </div>
+  </div>
+    <div class="col-md-6">
+
+    <div class="gameButtons">
+
     <button id="feedButton" type="button">Feed Bear</button>
     <button id="hungerCheck" type="button" name="button">Check Hunger</button>
     <div class="foodLevel">
       <p>Your food level is: <span id ="currentLevel"></span></p>
 
     </div>
+    </div>
+  </div>
+</div>
 
     <div id="eaten">
-      <p>You've been eaten!!</p>
+      <p>Too late! You've been eaten by <span id="eatenBy"></span>!! You will not pass go or collect your $200 or in Leo's case your grammy</p>
       <img src="https://www.snopes.com/tachyon/2016/07/bear.jpg?resize=780,350" alt="Photo of bear eating leo.">
     </div>
+  </div>
   </body>
 </html>

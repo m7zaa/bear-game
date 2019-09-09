@@ -3,7 +3,7 @@ export class HungryBear {
 
   constructor(name) {
     this.name = name;
-    this.foodLevel = 10;
+    this.foodLevel = 1;
   }
 
   setHunger() {
@@ -29,6 +29,7 @@ export class HungryBear {
   }
   showEaten() {
     if (this.foodlevel < 1) {
+      // return false;
       console.log("showEaten");
     }
   }
